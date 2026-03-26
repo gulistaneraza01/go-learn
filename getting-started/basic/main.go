@@ -144,8 +144,8 @@ func main() {
 
 	// fmt.Println(Vertex{2, 4})
 
-	person1 := Person{1, "Gulistane", "Raza", 101}
-	fmt.Println(person1.FirstName)
-	fmt.Println(person1.LastName)
+	// person1 := Person{1, "Gulistane", "Raza", 101}
+	// fmt.Println(person1.FirstName)
+	// fmt.Println(person1.LastName)
 
 }
