@@ -1,0 +1,121 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	"math/rand/v2"
+	"runtime"
+	"time"
+
+	"rsc.io/quote"
+)
+
+func add(a, b int) (string, bool) {
+	println(a + b)
+	return "gulistane", true
+}
+
+func gretting() {
+	fmt.Println("Hello, World!", "Raza")
+	fmt.Println(quote.Go())
+
+	fmt.Println("random number=", rand.Float32())
+
+	fmt.Println("sqrt root of 144 is: ", math.Sqrt(142))
+
+	fmt.Println("PI value is: ", math.Pi)
+
+	// fmt.Println("Add to number", add(3, 7))
+	c, d := add(4, 5)
+
+	println(c, d)
+
+	var name bool
+	println(name)
+}
+
+func datatype() {
+	a := 2.6
+	// com := cmplx.Sqrt(5 + 2i)
+
+	var x bool
+	var y string
+	var z int
+	var w float32
+
+	println("hello", x, y, z, w)
+
+	b := int(a)
+	println(b)
+
+	const Pi = 3
+	println(Pi)
+}
+
+func loop() {
+	// sum := 1
+	// for i := 1; i <= 5; i++ {
+	// 	sum *= i
+	// }
+
+	// fmt.Println(sum)
+
+	// isRun := true
+	// b := 1
+	// for isRun == true {
+	// 	fmt.Println("raza")
+	// 	if b == 5 {
+	// 		break
+	// 	}
+	// 	b++
+
+	// }
+
+	// var num string = "raza"
+
+	// if num == "Raza" {
+	// 	name := "Gulistane"
+	// 	println("true", name)
+	// } else {
+	// 	fmt.Println("false-")
+	// }
+
+	a := 1
+	switch a {
+	case 1:
+		fmt.Println("monday")
+	case 2:
+		fmt.Println("monday")
+	default:
+		fmt.Println("deafult case run")
+	}
+
+	os := runtime.GOOS
+	defer fmt.Println(os)
+
+	fmt.Println(time.Now().Weekday())
+
+}
+
+func pointer() {
+
+	a := 2
+
+	b := &a
+
+	a = 4
+
+	fmt.Println("b value is = ", *b, a)
+
+}
+
+func main() {
+	// defer gretting()
+
+	// datatype()
+
+	// loop()
+
+	pointer()
+
+}

@@ -1,4 +1,4 @@
-module example/hello
+module github.com/gulistaneraza01/basic
 
 go 1.26.1
 

@@ -1,0 +1,56 @@
+{
+  "workbench.colorTheme": "Night Owl",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 21,
+  "editor.fontWeight": 700,
+  "editor.linkedEditing": true,
+  "editor.formatOnSave": true,
+  "diffEditor.wordWrap": "off",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.formatOnSave": true
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true
+  },
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "jdk.telemetry.enabled": false,
+  "redhat.telemetry.enabled": true,
+  "docker.extension.enableComposeLanguageServer": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "claudeCode.preferredLocation": "panel",
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "gitlens.codeLens.enabled": false,
+
+  "gopls": {
+    "staticcheck": true
+  }
+}
