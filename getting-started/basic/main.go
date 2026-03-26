@@ -109,8 +109,28 @@ func pointer() {
 
 }
 
-func structEmp() {
-	fmt.Println("hello")
+type Vertex struct {
+	X int
+	Y int
+}
+
+type ModerationItem struct {
+	Type       string    `json:"type"` // "post" or "comment"
+	ID         int       `json:"id"`
+	PostID     int       `json:"postId,omitempty"`
+	PostNumber int       `json:"postNumber,omitempty"`
+	PostSlug   string    `json:"postSlug,omitempty"`
+	Title      string    `json:"title,omitempty"`
+	Content    string    `json:"content"`
+	CreatedAt  time.Time `json:"createdAt"`
+	PostTitle  string    `json:"postTitle,omitempty"`
+}
+
+type Person struct {
+	ID        int
+	FirstName string
+	LastName  string
+	RollNo    int
 }
 
 func main() {
@@ -122,9 +142,10 @@ func main() {
 
 	// pointer()
 
-	structEmp()
+	// fmt.Println(Vertex{2, 4})
 
-a := 2
-fmt.Println(a)
+	person1 := Person{1, "Gulistane", "Raza", 101}
+	fmt.Println(person1.FirstName)
+	fmt.Println(person1.LastName)
 
 }
