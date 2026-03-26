@@ -87,7 +87,7 @@ func loop() {
 	case 2:
 		fmt.Println("monday")
 	default:
-		fmt.Println("deafult case run")
+		fmt.Println("default case run")
 	}
 
 	os := runtime.GOOS
@@ -109,13 +109,22 @@ func pointer() {
 
 }
 
+func structEmp() {
+	fmt.Println("hello")
+}
+
 func main() {
-	// defer gretting()
+	// defer greting()
 
 	// datatype()
 
 	// loop()
 
-	pointer()
+	// pointer()
+
+	structEmp()
+
+a := 2
+fmt.Println(a)
 
 }
