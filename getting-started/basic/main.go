@@ -196,6 +196,6 @@ func main() {
 
 	// fmt.Println(a, b, c)
 
-	//some i added for dev
+	//some i added for qa people
 
 }
