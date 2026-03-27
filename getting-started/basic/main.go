@@ -133,6 +133,41 @@ type Person struct {
 	RollNo    int
 }
 
+func arrays() {
+
+	var a [5]int
+	a[4] = 4
+
+	nums := [4]int{1, 2, 3, 4}
+
+	sliceNums := nums[2:4]
+
+	sliceNums[0] = 10
+
+	person := []Person{{1, "raza1", "r", 100}, {2, "raju", "r", 101}, {1, "raza", "r", 100}, {2, "raju", "r", 101}, {1, "raza", "r", 100}, {2, "raju", "r", 101}}
+
+	fmt.Println(person[0].FirstName)
+}
+
+func slice() {
+	nums := []int{8, 10, 4}
+
+	// nums = nums[:1]
+	// nums = nums[2:]
+	nums = nums[1:2]
+
+	fmt.Println((nums))
+}
+
+func nilExm() {
+	var nums []int
+
+	fmt.Println(len(nums), cap(nums))
+	// if nums == nil {
+	// 	fmt.Println("nil!")
+	// }
+}
+
 func main() {
 	// defer greting()
 
@@ -144,8 +179,21 @@ func main() {
 
 	// fmt.Println(Vertex{2, 4})
 
-	person1 := Person{1, "Gulistane", "Raza", 101}
+	// person1 := Person{1, "Gulistane", "Raza", 101}
 	// fmt.Println(person1.FirstName)
-	fmt.Println(person1.LastName)
+	// fmt.Println(person1.LastName)
+
+	// arrays()
+
+	// slice()
+
+	// nilExm()
+
+	// var a int8 = 4
+	// var b int16 = 4888
+
+	// var c = int8(b)
+
+	// fmt.Println(a, b, c)
 
 }
