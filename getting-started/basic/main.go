@@ -168,6 +168,85 @@ func nilExm() {
 	// }
 }
 
+func makeExm() {
+	a := make([]int, 6)
+	// b := make([]string, 3)
+	// fmt.Println(a, b)
+
+	// matrix := [2][2]int{{}}
+	// matrix[0][0] = 89
+
+	a = append(a, 2, 34, 7)
+	var b []int
+	b = append(b, 6)
+	fmt.Println(a, b)
+}
+
+func rangeExample() {
+
+	nums := []string{}
+
+	fruits := make([]string, 4)
+
+	nums = append(nums, "hell")
+	for _, num := range nums {
+		fmt.Println(num)
+	}
+
+	for _, fruit := range fruits {
+		fmt.Println(fruit)
+	}
+
+}
+
+type Users struct {
+	Name  string
+	Phone int
+}
+
+var users = map[string]Users{
+	"user1": {"raza", 123},
+	"user2": {"raju", 123},
+}
+
+func mapExample() {
+	// users := map[string]Users{
+	// 	"user1": {Name: "raza", Phone: 123},
+	// 	"user2": {Name: "raju", Phone: 123},
+	// }
+
+	// users["user1"] = Users{"raza", 1233}
+
+	// fmt.Println(users)
+
+	numbers := make(map[string]int)
+
+	numbers["one"] = 1
+	numbers["two"] = 2
+
+	fmt.Println(numbers)
+	// delete(numbers, "one")
+
+	numbervalue, err := numbers["one1"]
+
+	fmt.Println(numbervalue, err)
+
+	// for key, value := range numbers {
+	// 	fmt.Println(key, value)
+
+	// }
+
+}
+
+func funcInsideFunc(callback func(string)) {
+	fmt.Println("inside functio")
+	callback("raza")
+}
+
+func fullName(name string) {
+	fmt.Println("my name is ", name)
+}
+
 func main() {
 	// defer greting()
 
@@ -198,4 +277,11 @@ func main() {
 
 	//some i added for dev
 
+	// makeExm()
+
+	// rangeExample()
+
+	// mapExample()
+
+	funcInsideFunc(fullName)
 }
