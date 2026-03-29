@@ -283,5 +283,6 @@ func main() {
 
 	// mapExample()
 
-	funcInsideFunc(fullName)
+	// funcInsideFunc(fullName)
+
 }
