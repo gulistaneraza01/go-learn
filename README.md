@@ -1,1 +1,3 @@
 # go-learn
+
+# commitlint
