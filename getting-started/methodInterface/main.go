@@ -11,37 +11,37 @@ func (n Number) add() int {
 	return n.Num1 + n.Num2
 }
 
-type Vertex struct {
-	X float64
-	Y float64
-}
+// type Vertex struct {
+// 	X float64
+// 	Y float64
+// }
 
-func test(v *Vertex) {
-	v.X = 100
-}
+// func test(v *Vertex) {
+// 	v.X = 100
+// }
 
-func (v *Vertex) Scale(f float64) {
-	v.X = v.X * f
-	v.Y = v.Y * f
-}
+// func (v *Vertex) Scale(f float64) {
+// 	v.X = v.X * f
+// 	v.Y = v.Y * f
+// }
 
-func ScaleFunc(v *Vertex, f float64) {
-	v.X = v.X * f
-	v.Y = v.Y * f
-}
+// func ScaleFunc(v *Vertex, f float64) {
+// 	v.X = v.X * f
+// 	v.Y = v.Y * f
+// }
 
-type Animal interface {
-	Sound() string
-}
+// type Animal interface {
+// 	Sound() string
+// }
 
-type Dog struct {
-	Name string
-	Age  int
-}
+// type Dog struct {
+// 	Name string
+// 	Age  int
+// }
 
-func (d Dog) Sound() string {
-	return "Woof"
-}
+// func (d Dog) Sound() string {
+// 	return "Woof"
+// }
 
 func main() {
 	// addTwoNumber := Number{2, 3}
@@ -68,24 +68,44 @@ func main() {
 	// value, err := i.(int)
 	// fmt.Println(value, err)
 
-	var i interface{} = 4
-	do(i)
+	// var i interface{} = 4
+	// do(i)
+
+	_, err := Sqrt(4)
+	fmt.Println(err)
+	fmt.Println(Sqrt(-9))
 
 }
 
-func random(i interface{}) {
-	fmt.Println(i)
+type ErrNegativeSqrt int
+
+func (e ErrNegativeSqrt) Error() string {
+	// return fmt.PrintLn("cannot Sqrt negative number:", e)
+	return "cannot Sqrt negative number"
 }
 
-func do(i interface{}) {
-	switch v := i.(type) {
-	case int:
-		fmt.Println("a", i, v)
+func Sqrt(num int) (int, error) {
 
-	case string:
-		fmt.Println("hello")
-
-	default:
-		fmt.Println("invalid")
+	if num < 0 {
+		return 0, ErrNegativeSqrt(num)
 	}
+
+	return num * num, nil
 }
+
+// func random(i interface{}) {
+// 	fmt.Println(i)
+// }
+
+// func do(i interface{}) {
+// 	switch v := i.(type) {
+// 	case int:
+// 		fmt.Println("a", i, v)
+
+// 	case string:
+// 		fmt.Println("hello")
+
+// 	default:
+// 		fmt.Println("invalid")
+// 	}
+// }
