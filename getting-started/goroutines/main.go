@@ -30,14 +30,22 @@ func main() {
 
 	// time.Sleep(time.Second)
 
-	nums := []int{1, 23, 4, 5, 6}
-	c := make(chan int)
+	// nums := []int{1, 23, 4, 5, 6}
+	// c := make(chan int)
 
-	go AddChan(nums[:len(nums)/2], c)
-	go AddChan(nums[len(nums)/2:], c)
+	// go AddChan(nums[:len(nums)/2], c)
+	// go AddChan(nums[len(nums)/2:], c)
 
-	x, y := <-c, <-c
+	// x, y := <-c, <-c
 
-	fmt.Println(x, y, x+y)
+	// fmt.Println(x, y, x+y)
+
+	ch := make(chan int, 3)
+
+	ch <- 22
+	ch <- 223
+	ch <- 112
+
+	fmt.Println(<-ch, <-ch, <-ch)
 
 }
