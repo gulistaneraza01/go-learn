@@ -40,12 +40,35 @@ func main() {
 
 	// fmt.Println(x, y, x+y)
 
-	ch := make(chan int, 3)
+	// ch := make(chan int, 3)
 
-	ch <- 22
-	ch <- 223
-	ch <- 112
+	// ch <- 22
+	// ch <- 223
+	// ch <- 112
 
-	fmt.Println(<-ch, <-ch, <-ch)
+	// fmt.Println(<-ch, <-ch, <-ch)
 
+	c := make(chan int)
+	quit := make(chan int)
+	go func() {
+		for i := 0; i < 10; i++ {
+			fmt.Println(<-c)
+		}
+		quit <- 0
+	}()
+	fibonacci(c, quit)
+
+}
+
+func fibonacci(c, quit chan int) {
+	x, y := 0, 1
+	for {
+		select {
+		case c <- x:
+			x, y = y, x+y
+		case <-quit:
+			fmt.Println("quit")
+			return
+		}
+	}
 }
